@@ -10,12 +10,13 @@ import (
 func init() {
 	initializers.LoadEnvVariables()
 	initializers.ConnectToDb()
+	initializers.SyncDatabase()
 
 }
 
 func main() {
 
-	fmt.Println("hello2")
+	fmt.Println("hello3")
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
